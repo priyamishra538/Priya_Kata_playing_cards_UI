@@ -1,0 +1,28 @@
+<header>
+    Playing Card UI
+</header>
+
+<section>
+    <mat-card class="card">
+        <button mat-raised-button (click)="resetDeck()" class="resetDeckButton">
+            Reset Deck
+        </button>
+
+        <button mat-raised-button color="primary" (click)="drawCard()" [disabled]="isDisabled"> Draw Card</button>
+
+    </mat-card>
+
+
+
+    <mat-card class="card" *ngIf="isDeckCreated">
+        <mat-spinner *ngIf="showLoader"></mat-spinner>
+        <h5 *ngIf="showEmptyCardMsg" class="errorMsg">The deck is empty, please reset the deck</h5>
+        <img *ngIf="!showEmptyCardMsg && !showLoader && isDeckCreated" src={{card}}>
+    </mat-card>
+
+
+</section>
+
+<footer>
+    <p>Footer</p>
+</footer>
