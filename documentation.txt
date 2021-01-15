@@ -1,0 +1,5 @@
+Step 1 : Please raise pull request from https://github.com/priyamishra538/Priya_Kata_playing_cards_UI 
+
+Setp 2 : Do npm install
+
+step 3 : Do ng serve
